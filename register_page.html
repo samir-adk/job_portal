@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form action="register.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        
+        <label for="type">Account Type:</label>
+        <select name="type">
+            <option value="Job seeker">Job seeker</option>
+            <option value="Job Provider">Job Provider</option>
+        </select><br>
+        
+        <input type="submit" name="register" value="Register">
+    </form>
+</body>
+</html>
