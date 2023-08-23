@@ -1,9 +1,17 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 <form method="POST" action="login.php">
-	<input type="text" name="user_name">
-	<input type="text" name="password">
-	<input type="submit" name="login">
+    <input type="text" name="user_name">
+    <input type="text" name="password">
+    <input type="submit" name="login">
 </form>
+</body>
+</html>
+
 
 <?php
 session_start();
@@ -25,7 +33,7 @@ if (isset($_POST['login'])) {
             header("Location: index.php");
             exit();
         } else {
-            header("Location: login.php");
+            header("Location: login.html");
             exit();
         }
     } else {
@@ -34,4 +42,3 @@ if (isset($_POST['login'])) {
 }
 ?>
 
-<!-- Your HTML form remains the same -->
