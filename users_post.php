@@ -32,11 +32,12 @@
                     //delete form
 				  	echo "<form method='POST' action='delete_job.php'>";
 					echo "<input type='hidden' name='delete_id' value='" . $row_data['id'] . "'>";
+
 					echo "<input type='submit' name='delete' value='Delete'>";
 					echo "</form>";
 					//edit link
-					// echo "<a href='edit_job.php?edit_id=" . $row_data['id'] . "'>Edit</a>";
-
+					echo "<a href='edit_job.php?edit_id=" . $row_data['id'] . "'>Edit</a>";
+                 
 
 					echo "</div>";
 
@@ -46,6 +47,11 @@
 				echo "Error fetching posts: " . $connection->error;
 			}
 		}
+		else
+			{
+			echo "please login to view your personal posts";
+
+			}
 		?>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 include "connection.php";
-
+global $edit_id;
 if (isset($_GET['edit_id'])) {
     $edit_id = $_GET['edit_id'];
 
@@ -17,12 +17,15 @@ if (isset($_GET['edit_id'])) {
 if (isset($_POST['update'])) {
     $updated_title = isset($_POST['job_title']) ? $_POST['job_title'] : '';
     $updated_description = isset($_POST['description']) ? $_POST['description'] : '';
+    $get_edit_id=isset($_POST['edit_id']) ? $_POST['edit_id'] : '';
     $updated_category = isset($_POST['category']) ? $_POST['category'] : '';
 
-    $update_query = "UPDATE post SET job_title = '$updated_title', description = '$updated_description', job_category_id = '$updated_category' WHERE id = '$edit_id' ";
+    $update_query = "UPDATE post SET job_title = '$updated_title', description = '$updated_description', job_category_id = '$updated_category' WHERE id = '$get_edit_id' ";
 
     if ($connection->query($update_query) === TRUE) {
         echo "Post updated successfully!";
+        header("Location:users_post.php");
+        exit();
     } else {
         echo "Error updating post: " . $connection->error;
     }
