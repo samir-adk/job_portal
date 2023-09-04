@@ -11,6 +11,7 @@
 <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<<<<<<< HEAD
 <script src="./js/custom.js"></script>
   <?php
 include 'header.php' ;
@@ -32,6 +33,16 @@ include 'header.php' ;
 	<!-- <a href="job_post.php">job post</a>
 <a href="login.html">login</a>
 <a href="index.php">index</a>
+=======
+
+	<a href="job_post.php">job post</a><br>
+<a href="login.php">login</a><br>
+<a href="index.php">index</a><br>
+<a href="users_post.php">user posted job</a><br>
+<a href="register_page.html">register page</a><br>
+<a href="all_posts.php">all posts</a>
+
+>>>>>>> ca66b18ff5504df38fd59700dd289c5148bb60f3
 
 
     <?php
@@ -42,12 +53,16 @@ include 'header.php' ;
 	} else {
 	    echo "You are not logged in.";
 	}
-   ?>  -->
+ 
 
-
+<<<<<<< HEAD
 	<?php
   include 'footer.php';
   ?>
+=======
+?>
+	
+>>>>>>> ca66b18ff5504df38fd59700dd289c5148bb60f3
 </body>
 
 </html>
