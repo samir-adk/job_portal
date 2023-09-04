@@ -37,7 +37,7 @@
 					echo "</form>";
 					//edit link
 					echo "<a href='edit_job.php?edit_id=" . $row_data['id'] . "'>Edit</a>";
-                 
+                  
 
 					echo "</div>";
 

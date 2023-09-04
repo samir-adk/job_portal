@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,6 +122,7 @@
 
 
 
+>>>>>>> ca66b18ff5504df38fd59700dd289c5148bb60f3
 <?php
 session_start();
 include 'connection.php';
