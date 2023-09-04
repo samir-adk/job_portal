@@ -1,10 +1,4 @@
 
-<form method="POST" action="login.php">
-	<input type="text" name="user_name">
-	<input type="text" name="password">
-	<input type="submit" name="login">
-</form>
-
 <?php
 session_start();
 include 'connection.php';

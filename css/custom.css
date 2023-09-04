@@ -1,0 +1,4 @@
+.fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 10ms linear;
+  }
