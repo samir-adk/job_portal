@@ -13,6 +13,8 @@ if (isset($_POST['register'])) {
     
     if ($connection->query($query) === TRUE) {
         echo "Registration successful!";
+        header("Location:Login.php");
+        exit();
     } else {
         echo "Error: " . $query . "<br>" . $connection->error;
     }
