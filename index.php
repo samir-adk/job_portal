@@ -74,7 +74,7 @@ include 'header.php' ;
 						<span class="flaticon-tour"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Design & Creative</a></h5>
+					   <h5><a href="find_a_job.php">Design & Creative</a></h5>
 						<span>(653)</span>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ include 'header.php' ;
 						<span class="flaticon-cms"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Design & Development</a></h5>
+					   <h5><a href="find_a_job.php">Design & Development</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ include 'header.php' ;
 						<span class="flaticon-report"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Sales & Marketing</a></h5>
+					   <h5><a href="find_a_job.php">Sales & Marketing</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -107,7 +107,7 @@ include 'header.php' ;
 						<span class="flaticon-app"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Mobile Application</a></h5>
+					   <h5><a href="find_a_job.php">Mobile Application</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -118,7 +118,7 @@ include 'header.php' ;
 						<span class="flaticon-helmet"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Construction</a></h5>
+					   <h5><a href="find_a_job.php">Construction</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -129,7 +129,7 @@ include 'header.php' ;
 						<span class="flaticon-high-tech"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Information Technology</a></h5>
+					   <h5><a href="find_a_job.php">Information Technology</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -140,7 +140,7 @@ include 'header.php' ;
 						<span class="flaticon-real-estate"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Real Estate</a></h5>
+					   <h5><a href="find_a_job.php">Real Estate</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -151,7 +151,7 @@ include 'header.php' ;
 						<span class="flaticon-content"></span>
 					</div>
 					<div class="services-cap">
-					   <h5><a href="job_listing.html">Content Writer</a></h5>
+					   <h5><a href="find_a_job.php">Content Writer</a></h5>
 						<span>(658)</span>
 					</div>
 				</div>
@@ -162,7 +162,7 @@ include 'header.php' ;
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="browse-btn2 text-center mt-50">
-					<a href="job_listing.html" class="border-btn2">Browse All Sectors</a>
+					<a href="find_a_job.php" class="border-btn2">Browse All Sectors</a>
 				</div>
 			</div>
 		</div>
@@ -202,10 +202,10 @@ include 'header.php' ;
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list1.png" alt=""></a>
+							<a href="job_details.php"><img src="assets/img/icon/job-list1.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
+							<a href="job_details.php"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -214,7 +214,7 @@ include 'header.php' ;
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
+						<a href="job_details.php">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -222,10 +222,10 @@ include 'header.php' ;
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list2.png" alt=""></a>
+							<a href="job_details.php"><img src="assets/img/icon/job-list2.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
+							<a href="job_details.php"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -234,7 +234,7 @@ include 'header.php' ;
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
+						<a href="job_details.php">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -242,10 +242,10 @@ include 'header.php' ;
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list3.png" alt=""></a>
+							<a href="job_details.php"><img src="assets/img/icon/job-list3.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
+							<a href="job_details.php"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -254,7 +254,7 @@ include 'header.php' ;
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
+						<a href="job_details.php">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -262,10 +262,10 @@ include 'header.php' ;
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list4.png" alt=""></a>
+							<a href="job_details.php"><img src="assets/img/icon/job-list4.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
+							<a href="job_details.php"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -274,7 +274,7 @@ include 'header.php' ;
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
+						<a href="job_details.php">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
