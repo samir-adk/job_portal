@@ -4,7 +4,7 @@
 <title>Job Portal Website</title>
 <meta name="description" content="Best Job Portal Website in Sydney">
 <meta name="keywords" content="Job Portal">
-<<<<<<< HEAD
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script type="text/javascript" src="comment_controller.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -596,9 +596,7 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-=======
-  
->>>>>>> 5f0b3b83c0f2fdb2c9f6563ce1566bbe0540b9fa
+
 </body>
 
 </html>
