@@ -19,4 +19,32 @@ mymodule.controller('jobController', function($log, $scope, $http) {
             console.log("Error in posting comment", error);
         });
     };
+     $scope.likePost = function(post_id, user_id, isLiked) {
+
+        if (isLiked) {
+            // Unlike the post
+            $http.post('like_job.php', {
+                user_id: user_id,
+                liked_post_id: post_id,
+                action: 'unlike'
+            }).then(function(response) {
+                // Handle the response as needed
+                // For example, update the UI to indicate the post is unliked
+            }).catch(function(error) {
+                console.log("Error in unliking post", error);
+            });
+        } else {
+            // Like the post
+            $http.post('like_job.php', {
+                user_id: user_id,
+                liked_post_id: post_id,
+                action: 'like'
+            }).then(function(response) {
+                // Handle the response as needed
+                // For example, update the UI to indicate the post is liked
+            }).catch(function(error) {
+                console.log("Error in liking post", error);
+            });
+        }
+    };
 });

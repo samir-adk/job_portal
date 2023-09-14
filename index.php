@@ -22,13 +22,17 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+
+  <?php
+  session_start();
+   include 'header.php' ;
+   ?>
 </head>
 <body>
 <script src="./js/custom.js"></script>
 
-  <?php
-   include 'header.php' ;
-	session_start();
+   <?php
+	
 	if (isset($_SESSION['logged_user'])) {
 	    $user_name = $_SESSION['logged_user'];
 	    echo "Welcome, $user_name!";
@@ -81,11 +85,11 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
+
 </div></div>
  
 </main><a href="job_post.php">job post</a>
-<a href="login.html">login</a>
+<a href="login.php">login</a>
 <a href="index.php">index</a>
 
 <a href="job_post.php">job post</a><br>
@@ -101,9 +105,9 @@
 <script type="text/javascript" src="notification.js"></script>
 
 </div>
-    <?php 
+ 
 
-=======
+
 <!-- slider Area End-->
 <!-- Our Services Start -->
 <div class="our-services section-pad-t30">
@@ -541,23 +545,16 @@
 <a href="index.php">index</a> -->
 
 
-    <!-- <?php
-	if (isset($_SESSION['logged_user'])) {
-	    $user_name = $_SESSION['logged_user'];
-	    echo "Welcome, $user_name!";
-	} else {
-	    echo "You are not logged in.";
-	}
- ?> -->
+    
 
 	<?php
->>>>>>> 6d4e4a6818d9a2ce3f16c25a8293e84f93704b2b
+
   include 'footer.php';
 
   ?>
-<<<<<<< HEAD
 
-=======
+
+
    <!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
@@ -594,7 +591,6 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
->>>>>>> 6d4e4a6818d9a2ce3f16c25a8293e84f93704b2b
 </body>
 
 </html>
