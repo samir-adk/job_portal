@@ -26,7 +26,6 @@
   <!-- iCheck -->
 <?php
 include 'header_admin.php';
-
 ?>
 <body id="page-top">
 
@@ -56,18 +55,23 @@ include 'header_admin.php';
     </a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="admin/active-jobs.php">
+    <a class="nav-link" href="admin/active_jobs.php">
       <i class="fas fa-fw fa-briefcase"></i>
       <span>Active Jobs</span>
     </a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="admin/applications.php">
+    <a class="nav-link" href="applications.php">
       <i class="fas fa-fw fa-address-card-o"></i>
       <span>Applications</span>
     </a>
   </li>
- 
+  <li class="nav-item active">
+    <a class="nav-link" href="companies.php">
+      <i class="fas fa-fw fa-building"></i>
+      <span>Companies</span>
+    </a>
+  </li>
   <li class="nav-item active">
     <a class="nav-link" href="../logout.php">
       <i class="fas fa-fw fa-arrow-circle-o-right"></i>
@@ -312,40 +316,48 @@ include 'header_admin.php';
                 <!-- End of Topbar -->
              <h3>Job Portal Statistics</h3>
 <div class="row">
-
-
-
-
+  <div class="col-md-6">
+    <div class="info-box bg-c-yellow">
+      <span class="info-box-icon bg-red"><i class="ion ion-briefcase"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Active Company Registered</span>
+        <span class="info-box-number">0</span>
+      </div>
+    </div>                
+  </div>
+  <div class="col-md-6">
+    <div class="info-box bg-c-yellow">
+      <span class="info-box-icon bg-red"><i class="ion ion-briefcase"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Pending Company Approval</span>
+        <span class="info-box-number">0</span>
+      </div>
+    </div>                
+  </div>
+  <div class="col-md-6">
+    <div class="info-box bg-c-yellow">
+      <span class="info-box-icon bg-green"><i class="ion ion-person-stalker"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Registered Candidates</span>
+        <span class="info-box-number">0</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="info-box bg-c-yellow">
+      <span class="info-box-icon bg-green"><i class="ion ion-person-stalker"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Pending Candidates Confirmation</span>
+        <span class="info-box-number">0</span>
+      </div>
+    </div>
+  </div>
   <div class="col-md-6">
     <div class="info-box bg-c-yellow">
       <span class="info-box-icon bg-aqua"><i class="ion ion-person-add"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Total Job Posts</span>
-        <?php
-
-include "connection.php"; // Include your database connection file here
-
-// Execute the SQL query to get the total post count
-$sql = "SELECT COUNT(*) AS total_posts FROM post";
-$result = $connection->query($sql);
-
-if ($result) {
-    // Fetch the total post count from the result
-    $row = $result->fetch_assoc();
-    $totalPosts = $row['total_posts'];
-
-    // Display the total post count
-    echo "<span class='info-box-number'>$totalPosts</span>";
-} else {
-    // Handle any errors that may occur during the query execution
-    echo "Error: " . $connection->error;
-}
-
-// Close the database connection
-$connection->close();
-?>
-
-        
+        <span class="info-box-number">0</span>
       </div>
     </div>
   </div>
@@ -354,29 +366,7 @@ $connection->close();
       <span class="info-box-icon bg-yellow"><i class="ion ion-ios-browsers"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Total Applications</span>
-        <?php
-
-include "connection.php"; // Include your database connection file here
-
-// Execute the SQL query to get the total post count
-$sql = "SELECT COUNT(*) AS total_user FROM users";
-$result = $connection->query($sql);
-
-if ($result) {
-    // Fetch the total post count from the result
-    $row = $result->fetch_assoc();
-    $total_user = $row['total_user'];
-
-    // Display the total post count
-    echo "<span class='info-box-number'>$total_user</span>";
-} else {
-    // Handle any errors that may occur during the query execution
-    echo "Error: " . $connection->error;
-}
-
-// Close the database connection
-$connection->close();
-?>
+        <span class="info-box-number">0</span>
       </div>
     </div>
   </div>
