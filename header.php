@@ -63,9 +63,21 @@
                                     </nav>
                                 </div>          
                                 <!-- Header-btn -->
-                                <div class="header-btn d-none f-right d-lg-block">
-                                    <a href="register_page.html" class="btn head-btn1">Register</a>
-                                    <a href="login.php" class="btn head-btn2">Login</a>
+                                 <div class="header-btn d-none f-right d-lg-block">
+                                <?php
+  
+                    if (isset($_SESSION['logged_user'])) {
+                        $user_name = $_SESSION['logged_user'];
+                        echo "Welcome, $user_name!";
+                        echo " <a href='logout.php' class='btn head-btn1'>Log out</a>";
+                    } else {
+                    
+              echo "<a href='register_page.html' class='btn head-btn1'>Register</a>";
+              echo "<a href='login.php' class='btn head-btn2'>Login</a>";
+
+                    }
+
+                    ?>
                                 </div>
                             </div>
                         </div>

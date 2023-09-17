@@ -4,7 +4,6 @@
 <title>Job Portal Website</title>
 <meta name="description" content="Best Job Portal Website in Sydney">
 <meta name="keywords" content="Job Portal">
-
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script type="text/javascript" src="comment_controller.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -28,9 +27,6 @@
   session_start();
    include 'header.php' ;
    ?>
-=======
-
->>>>>>> 5f0b3b83c0f2fdb2c9f6563ce1566bbe0540b9fa
 </head>
 <body>
 <script src="./js/custom.js"></script>
@@ -126,101 +122,60 @@
 			</div>
 		</div>
 		<div class="row d-flex justify-contnet-center">
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-tour"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Design & Creative</a></h5>
-						<span>(653)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-cms"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Design & Development</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-report"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Sales & Marketing</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-app"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Mobile Application</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-helmet"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Construction</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-high-tech"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Information Technology</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-real-estate"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Real Estate</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-				<div class="single-services text-center mb-30">
-					<div class="services-ion">
-						<span class="flaticon-content"></span>
-					</div>
-					<div class="services-cap">
-					   <h5><a href="find_a_job.php">Content Writer</a></h5>
-						<span>(658)</span>
-					</div>
-				</div>
-			</div>
+
+		
+
+
+    //retrive all categories    
+    <?php
+     include 'connection.php';
+    // SQL query to retrieve all categories
+    $query = "SELECT category_id, category_name FROM category";
+
+    // Execute the query
+    $result = mysqli_query($connection, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $category_id = $row['category_id'];
+            $category_name = $row['category_name'];
+            
+            // Create dynamic links for each category
+            echo '<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">';
+            echo '<div class="single-services text-center mb-30">';
+            echo '<div class="services-ion">';
+            echo '<span class="flaticon-tour"></span>';
+            echo '</div>';
+            echo '<div class="services-cap">';
+            echo "<h5><a href='job_by_category.php?category_id=$category_id'>$category_name</a></h5>";
+            echo '<span>(653)</span>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }
+        mysqli_free_result($result);
+    } else {
+        echo "Error: " . mysqli_error($connection);
+    }
+
+    // Close the database connection
+    mysqli_close($connection);
+    ?>
+</div>
+
+
+//end of retrival categories
+
+
+
 		</div>
 		<!-- More Btn -->
 		<!-- Section Button -->
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="browse-btn2 text-center mt-50">
-					<a href="find_a_job.php" class="border-btn2">Browse All Sectors</a>
+					<a href="job_listing.html" class="border-btn2">Browse All Sectors</a>
 				</div>
 			</div>
 		</div>
@@ -260,10 +215,10 @@
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.php"><img src="assets/img/icon/job-list1.png" alt=""></a>
+							<a href="job_details.html"><img src="assets/img/icon/job-list1.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.php"><h4>Digital Marketer</h4></a>
+							<a href="job_details.html"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -272,7 +227,7 @@
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.php">Full Time</a>
+						<a href="job_details.html">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -280,10 +235,10 @@
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.php"><img src="assets/img/icon/job-list2.png" alt=""></a>
+							<a href="job_details.html"><img src="assets/img/icon/job-list2.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.php"><h4>Digital Marketer</h4></a>
+							<a href="job_details.html"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -292,7 +247,7 @@
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.php">Full Time</a>
+						<a href="job_details.html">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -300,10 +255,10 @@
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.php"><img src="assets/img/icon/job-list3.png" alt=""></a>
+							<a href="job_details.html"><img src="assets/img/icon/job-list3.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.php"><h4>Digital Marketer</h4></a>
+							<a href="job_details.html"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -312,7 +267,7 @@
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.php">Full Time</a>
+						<a href="job_details.html">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -320,10 +275,10 @@
 				<div class="single-job-items mb-30">
 					<div class="job-items">
 						<div class="company-img">
-							<a href="job_details.php"><img src="assets/img/icon/job-list4.png" alt=""></a>
+							<a href="job_details.html"><img src="assets/img/icon/job-list4.png" alt=""></a>
 						</div>
 						<div class="job-tittle">
-							<a href="job_details.php"><h4>Digital Marketer</h4></a>
+							<a href="job_details.html"><h4>Digital Marketer</h4></a>
 							<ul>
 								<li>Creative Agency</li>
 								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -332,7 +287,7 @@
 						</div>
 					</div>
 					<div class="items-link f-right">
-						<a href="job_details.php">Full Time</a>
+						<a href="job_details.html">Full Time</a>
 						<span>7 hours ago</span>
 					</div>
 				</div>
@@ -556,7 +511,6 @@
   include 'footer.php';
 
   ?>
-<<<<<<< HEAD
 
 
 
@@ -596,7 +550,6 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-
 </body>
 
 </html>
