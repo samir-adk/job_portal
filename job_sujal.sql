@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2023 at 01:41 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Sep 17, 2023 at 02:46 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `category` (
   `category_name` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `category_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
@@ -53,7 +53,7 @@ CREATE TABLE `comments` (
   `post_id` int(11) DEFAULT NULL,
   `comment_timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
   `comment` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `comments`
@@ -75,7 +75,7 @@ CREATE TABLE `likes` (
   `liked_user` int(11) DEFAULT NULL,
   `liked_post` int(11) DEFAULT NULL,
   `like_timestamp` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `likes`
@@ -103,7 +103,7 @@ CREATE TABLE `post` (
   `job_category_id` int(11) DEFAULT NULL,
   `description` varchar(200) NOT NULL,
   `post_user` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `post`
@@ -124,24 +124,26 @@ INSERT INTO `post` (`id`, `job_title`, `job_category_id`, `description`, `post_u
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `user_type` enum('JOb Seeker','Job Provider') DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `user_type` varchar(50) DEFAULT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `name`, `user_type`, `password`) VALUES
-(1, 'sameer', 'JOb Seeker', 'eresrrter'),
-(2, 'sameer4', 'JOb Seeker', 'eresrrter'),
-(3, '1', 'JOb Seeker', '1'),
-(4, '1', 'JOb Seeker', '1'),
-(5, 'testme', 'JOb Seeker', 'testme'),
-(6, 'samir', 'JOb Seeker', 'samir'),
-(7, 'samir@gmail.com', 'JOb Seeker', 'samir'),
-(8, 'sameer@gmail.com', 'JOb Seeker', 'sameer');
+INSERT INTO `users` (`user_id`, `name`, `username`, `user_type`, `password`) VALUES
+(1, '', 'sameer', 'Job Seeker', 'eresrrter'),
+(2, '', 'sameer4', 'Job Seeker', 'eresrrter'),
+(3, '', '1@gmail.com', 'Job Seeker', '1'),
+(4, '', '1', 'Job Seeker', '1'),
+(5, '', 'testme', 'Job Seeker', 'testme'),
+(6, '', 'samir', 'Job Seeker', 'samir'),
+(7, '', 'samir@gmail.com', 'Job Seeker', 'samir'),
+(8, '', 'sameer@gmail.com', 'Job Seeker', 'sameer'),
+(9, 'sujal', 'poudelsujal30@gmail.com', 'Job Provider', 'asdf');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +209,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
