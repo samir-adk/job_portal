@@ -31,7 +31,7 @@
 <body>
 <script src="./js/custom.js"></script>
 
-   <?php
+   <!-- <?php
 	
 	if (isset($_SESSION['logged_user'])) {
 	    $user_name = $_SESSION['logged_user'];
@@ -40,7 +40,7 @@
 	    echo "You are not logged in.";
 	}
 
-?>
+?> -->
 
 <main>
 
@@ -88,7 +88,7 @@
 
 </div></div>
  
-</main><a href="job_post.php">job post</a>
+<!-- </main><a href="job_post.php">job post</a>
 <a href="login.php">login</a>
 <a href="index.php">index</a>
 
@@ -104,7 +104,7 @@
 <div ng-app="NotificationApp" ng-controller="NotificationController" ng-init="Load()">
 <script type="text/javascript" src="notification.js"></script>
 
-</div>
+</div> -->
  
 
 
@@ -125,8 +125,7 @@
 
 		
 
-
-    //retrive all categories    
+ 
     <?php
      include 'connection.php';
     // SQL query to retrieve all categories
@@ -165,7 +164,7 @@
 </div>
 
 
-//end of retrival categories
+
 
 
 
