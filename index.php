@@ -449,7 +449,7 @@
 						</div>
 						<div class="blog-cap">
 							<p>|   Properties</p>
-							<h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
+							<h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
 							<a href="#" class="more-btn">Read more »</a>
 						</div>
 					</div>
@@ -468,7 +468,7 @@
 						</div>
 						<div class="blog-cap">
 							<p>|   Properties</p>
-							<h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
+							<h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
 							<a href="#" class="more-btn">Read more »</a>
 						</div>
 					</div>

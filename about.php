@@ -54,9 +54,9 @@
                         <h2>24k Talented people are getting Jobs</h2>
                     </div>
                     <div class="support-caption">
-                        <p class="pera-top">Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillum.</p>
-                        <p>Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur signjnt occa cupidatat non inulpadeserunt mollit aboru. temnthp incididbnt ut labore mollit anim laborum suis aute.</p>
-                        <a href="about.html" class="btn post-btn">Post a job</a>
+                        <p class="pera-top">A job portal specific to Sydney, Australia, would be an online platform designed to connect job seekers with potential employers in the Sydney metropolitan area. Here's some information about what you might expect from a job portal focused on Sydney:</p>
+                        <p>It's important to note that job portals can vary in terms of features and functionality, and there may be multiple job portals serving the Sydney area, each with its own unique offerings and user base. Job seekers and employers in Sydney would typically use these portals to connect, making the job search and recruitment process more efficient and accessible.</p>
+                        <a href="post_a_job.php" class="btn post-btn">Post a job</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="process-cap">
                         <h5>1. Search a job</h5>
-                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                    <p>Search a various jobs with us</p>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="process-cap">
                         <h5>2. Apply for job</h5>
-                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                    <p>upload a cv</p>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="process-cap">
                         <h5>3. Get your job</h5>
-                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                    <p>get yorjob here</p>
                     </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                         </div>
                         <div class="blog-cap">
                             <p>|   Properties</p>
-                            <h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
+                            <h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
                             <a href="#" class="more-btn">Read more »</a>
                         </div>
                     </div>
@@ -249,7 +249,7 @@
                         </div>
                         <div class="blog-cap">
                             <p>|   Properties</p>
-                            <h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
+                            <h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
                             <a href="#" class="more-btn">Read more »</a>
                         </div>
                     </div>

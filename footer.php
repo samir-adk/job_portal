@@ -9,7 +9,8 @@
                              <div class="footer-tittle">
                                  <h4>About Us</h4>
                                  <div class="footer-pera">
-                                     <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+                                     <p>We are Job Portal website in sydney providing various jobs related to every feild that user want</p>
+                                     <a href="about.php">View more</a>
                                 </div>
                              </div>
                          </div>
@@ -22,11 +23,11 @@
                                 <h4>Contact Info</h4>
                                 <ul>
                                     <li>
-                                    <p>Address :Your address goes
-                                        here, your demo address.</p>
+                                    <p>Buttonwood, California.
+Rosemead, CA 91770</p>
                                     </li>
-                                    <li><a href="#">Phone : +8880 44338899</a></li>
-                                    <li><a href="#">Email : </a></li>
+                                    <li><a href="#">Phone : +1 253 565 2365</a></li>
+                                    <li><a href="#">Email :support@jobportal.com </a></li>
                                 </ul>
                             </div>
 
@@ -37,11 +38,9 @@
                             <div class="footer-tittle">
                                 <h4>Important Link</h4>
                                 <ul>
-                                    <li><a href="#"> View Project</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Testimonial</a></li>
-                                    <li><a href="#">Proparties</a></li>
-                                    <li><a href="#">Support</a></li>
+                                    <li><a href="contact.php">Contact Us</a></li>
+                                    <li><a href="index.php">Testimonial</a></li>
+                                    <li><a href="admin_login.php">Admin Login</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,26 +48,12 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Newsletter</h4>
+                                <h4>Find a Job</h4>
                                 <div class="footer-pera footer-pera2">
-                                 <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                                 <p>Welcome to Job Portal Sydney</p>
+                                 <a href="find_a_job.php">View More</a>
                              </div>
-                             <!-- Form -->
-                             <div class="footer-form" >
-                                 <div id="mc_embed_signup">
-                                     <form target="_blank" action=""
-                                     method="get" class="subscribe_form relative mail_part">
-                                         <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                         class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                         onblur="this.placeholder = ' Email Address '">
-                                         <div class="form-icon">
-                                             <button type="submit" name="submit" id="newsletter-submit"
-                                             class="email_icon newsletter-submit button-contactForm"><img src="assets/img/icon/form.png" alt=""></button>
-                                         </div>
-                                         <div class="mt-10 info"></div>
-                                     </form>
-                                 </div>
-                             </div>
+                             
                             </div>
                         </div>
                     </div>
@@ -78,26 +63,26 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <!-- logo -->
                         <div class="footer-logo mb-20">
-                        <a href="index.html"><img src="image/logo.png" alt="footer" width=150 height=150></a>
+                        <a href="index.php"><img src="image/logo.png" alt="footer" width=150 height=150></a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <div class="footer-tittle-bottom">
                         <span>5000+</span>
-                        <p>Talented Hunter</p>
+                        <p>Web Developer</p>
                     </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <div class="footer-tittle-bottom">
                             <span>451</span>
-                            <p>Talented Hunter</p>
+                            <p>SEO</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                         <!-- Footer Bottom Tittle -->
                         <div class="footer-tittle-bottom">
                             <span>568</span>
-                            <p>Talented Hunter</p>
+                            <p>Data Analyst</p>
                         </div>
                     </div>
                </div>
@@ -110,9 +95,9 @@
                      <div class="row d-flex justify-content-between align-items-center">
                          <div class="col-xl-10 col-lg-10 ">
                              <div class="footer-copy-right">
-                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                 <p>
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  </p>
                              </div>
                          </div>
                          <div class="col-xl-2 col-lg-2">

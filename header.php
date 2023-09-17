@@ -58,7 +58,6 @@
                                             <li><a href="find_a_job.php">Find a Jobs </a></li>
                                             <li><a href="about.php">About</a></li>
                                             <li><a href="contact.php">Contact</a></li>
-                                            <li><a href="admin_login.php">Admin Login</a></li>
                                         </ul>
                                     </nav>
                                 </div>          
