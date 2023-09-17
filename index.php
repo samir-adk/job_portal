@@ -174,7 +174,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="browse-btn2 text-center mt-50">
-					<a href="job_listing.html" class="border-btn2">Browse All Sectors</a>
+					<a href="find_a_job.php" class="border-btn2">Browse All Sectors</a>
 				</div>
 			</div>
 		</div>
@@ -211,85 +211,67 @@
 		<div class="row justify-content-center">
 			<div class="col-xl-10">
 				<!-- single-job-content -->
-				<div class="single-job-items mb-30">
-					<div class="job-items">
-						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list1.png" alt=""></a>
-						</div>
-						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
-							<ul>
-								<li>Creative Agency</li>
-								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-								<li>$3500 - $4000</li>
-							</ul>
-						</div>
-					</div>
-					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
-						<span>7 hours ago</span>
-					</div>
-				</div>
-				<!-- single-job-content -->
-				<div class="single-job-items mb-30">
-					<div class="job-items">
-						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list2.png" alt=""></a>
-						</div>
-						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
-							<ul>
-								<li>Creative Agency</li>
-								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-								<li>$3500 - $4000</li>
-							</ul>
-						</div>
-					</div>
-					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
-						<span>7 hours ago</span>
-					</div>
-				</div>
-				 <!-- single-job-content -->
-				<div class="single-job-items mb-30">
-					<div class="job-items">
-						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list3.png" alt=""></a>
-						</div>
-						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
-							<ul>
-								<li>Creative Agency</li>
-								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-								<li>$3500 - $4000</li>
-							</ul>
-						</div>
-					</div>
-					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
-						<span>7 hours ago</span>
-					</div>
-				</div>
-				 <!-- single-job-content -->
-				<div class="single-job-items mb-30">
-					<div class="job-items">
-						<div class="company-img">
-							<a href="job_details.html"><img src="assets/img/icon/job-list4.png" alt=""></a>
-						</div>
-						<div class="job-tittle">
-							<a href="job_details.html"><h4>Digital Marketer</h4></a>
-							<ul>
-								<li>Creative Agency</li>
-								<li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-								<li>$3500 - $4000</li>
-							</ul>
-						</div>
-					</div>
-					<div class="items-link f-right">
-						<a href="job_details.html">Full Time</a>
-						<span>7 hours ago</span>
-					</div>
-				</div>
+				<?php
+    include 'connection.php';
+    
+    // Retrieve category_id from the URL
+
+    // SQL query to retrieve all job posts related to the selected category
+    $query = "SELECT * FROM post";
+
+    // Execute the query
+    $result = mysqli_query($connection, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            // Replace 'column_name' with actual column names from your 'job_posts' table
+            $job_title = $row['job_title'];
+            
+            $description=$row['description'];
+            $company_name=$row['company_name'];
+            $salary_range=$row['salary_range'];
+            $location=$row['location'];
+            $posted_date=$row['posted_date'];
+            $id=$row['id'];
+
+            echo '  <div class="single-job-items mb-30">';
+    echo '    <div class="job-items">';
+    echo '      <div class="company-img">';
+    echo '        <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>';
+    echo '      </div>';
+    echo '      <div class="job-tittle job-tittle2">';
+    echo '        <a href="#">';
+    echo '          <h4>' . $job_title . '</h4>';
+    echo '        </a>';
+    echo '        <ul>';
+    echo '          <li>' . $company_name . '</li>';
+    echo '          <li><i class="fas fa-map-marker-alt"></i>' . $location . '</li>';
+    echo '          <li>' . $salary_range . '</li>';
+    echo '        </ul>';
+    echo '      </div>';
+    echo '    </div>';
+    echo '    <div class="items-link items-link2 f-right">';
+    echo '      <a href="job_details.php?job_id=' . $id . '">Full Time</a>';
+    echo '      <span>' . $posted_date . '</span>';
+    echo '    </div>';
+    echo '  </div>';
+            }
+            mysqli_free_result($result);
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+
+        // Close the database connection
+        mysqli_close($connection);
+        ?>
+    </div>
+
+
+
+
+
+
 			</div>
 		</div>
 	</div>

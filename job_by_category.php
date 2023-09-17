@@ -264,6 +264,7 @@
             $salary_range=$row['salary_range'];
             $location=$row['location'];
             $posted_date=$row['posted_date'];
+            $id=$row['id'];
 
             echo '  <div class="single-job-items mb-30">';
     echo '    <div class="job-items">';
@@ -282,7 +283,7 @@
     echo '      </div>';
     echo '    </div>';
     echo '    <div class="items-link items-link2 f-right">';
-    echo '      <a href="job_details.php?job_id=' . 1 . '">Full Time</a>';
+    echo '      <a href="job_details.php?job_id=' . $id . '">Full Time</a>';
     echo '      <span>' . $posted_date . '</span>';
     echo '    </div>';
     echo '  </div>';

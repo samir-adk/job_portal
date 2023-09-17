@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-         <title>Find a Job </title>
+         <title>Job board HTML-5 Template </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-		<!-- CSS here -->
+        <!-- CSS here -->
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
             <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
             <link rel="stylesheet" href="assets/css/price_rangs.css">
@@ -21,9 +21,11 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+            <script type="text/javascript" src="job_by_category_controller.js"></script>
    </head>
 
-   <body>
+<body ng-app="testapp" ng-controller="testcontroller">
    <?php
    include 'header.php';?>
     <main>
@@ -80,8 +82,13 @@
                                         <option value="">Category 3</option>
                                         <option value="">Category 4</option>
                                     </select>
+
                                 </div>
                                 <!--  Select job items End-->
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
                                 <!-- select-Categories start -->
                                 <div class="select-Categories pt-80 pb-50">
                                     <div class="small-section-tittle2">
@@ -234,93 +241,71 @@
                                 </div>
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.php">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list2.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.php">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list3.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.php">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list4.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.php">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+    <?php
+    include 'connection.php';
+    
+    // Retrieve category_id from the URL
+
+    // SQL query to retrieve all job posts related to the selected category
+    $query = "SELECT * FROM post";
+
+    // Execute the query
+    $result = mysqli_query($connection, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            // Replace 'column_name' with actual column names from your 'job_posts' table
+            $job_title = $row['job_title'];
+            
+            $description=$row['description'];
+            $company_name=$row['company_name'];
+            $salary_range=$row['salary_range'];
+            $location=$row['location'];
+            $posted_date=$row['posted_date'];
+            $id=$row['id'];
+
+            echo '  <div class="single-job-items mb-30">';
+    echo '    <div class="job-items">';
+    echo '      <div class="company-img">';
+    echo '        <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>';
+    echo '      </div>';
+    echo '      <div class="job-tittle job-tittle2">';
+    echo '        <a href="#">';
+    echo '          <h4>' . $job_title . '</h4>';
+    echo '        </a>';
+    echo '        <ul>';
+    echo '          <li>' . $company_name . '</li>';
+    echo '          <li><i class="fas fa-map-marker-alt"></i>' . $location . '</li>';
+    echo '          <li>' . $salary_range . '</li>';
+    echo '        </ul>';
+    echo '      </div>';
+    echo '    </div>';
+    echo '    <div class="items-link items-link2 f-right">';
+    echo '      <a href="job_details.php?job_id=' . $id . '">Full Time</a>';
+    echo '      <span>' . $posted_date . '</span>';
+    echo '    </div>';
+    echo '  </div>';
+            }
+            mysqli_free_result($result);
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+
+        // Close the database connection
+        mysqli_close($connection);
+        ?>
+    </div>
+
+
+
+
+
+
+
+
+
+
                                
         <!-- Job List Area End -->
         <!--Pagination Start  -->
@@ -348,30 +333,30 @@
     <?php
     include 'footer.php';?>
 
-	<!-- JS here -->
-	
-		<!-- All JS Custom Plugins Link Here here -->
+    <!-- JS here -->
+    
+        <!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
-	    <!-- Jquery Mobile Menu -->
+        <!-- Jquery Mobile Menu -->
         <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Range -->
+        <!-- Jquery Slick , Owl-Carousel Range -->
         <script src="./assets/js/owl.carousel.min.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="./assets/js/price_rangs.js"></script>
-		<!-- One Page, Animated-HeadLin -->
+        <!-- One Page, Animated-HeadLin -->
         <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/animated.headline.js"></script>
         <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-		<!-- Scrollup, nice-select, sticky -->
+        <!-- Scrollup, nice-select, sticky -->
         <script src="./assets/js/jquery.scrollUp.min.js"></script>
         <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
+        <script src="./assets/js/jquery.sticky.js"></script>
         
         <!-- contact js -->
         <script src="./assets/js/contact.js"></script>
@@ -380,9 +365,9 @@
         <script src="./assets/js/mail-script.js"></script>
         <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
         
-		<!-- Jquery Plugins, main Jquery -->	
+        <!-- Jquery Plugins, main Jquery -->    
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
         
-    </body>
+</body>
 </html>
