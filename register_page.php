@@ -7,14 +7,19 @@ if (isset($_POST['register'])) {
     $user_email = isset($_POST['user_email']) ? $_POST['user_email'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
     $type = isset($_POST['type']) ? $_POST['type'] : '';
-    
-    // Insert user data into the database
-    $query = "INSERT INTO users (user_name,user_email,password,user_type) VALUES ('$user_name','$user_email', '$password', '$type')";
-    
+    $user_skills = isset($_POST['user_skills']) ? $_POST['user_skills'] : '';
+    $user_qualification = isset($_POST['user_qualification']) ? $_POST['user_qualification'] : '';
+
+    // Hash the password
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert user data into the database, including the new fields
+    $query = "INSERT INTO users (name, user_name, password, user_type, skills, qualification) 
+              VALUES ('$user_name', '$user_email', '$hashed_password', '$type', '$user_skills', '$user_qualification')";
+
     if ($connection->query($query) === TRUE) {
-        header("Location: login.php");
         echo "Registration successful!";
-        header("Location:Login.php");
+        header("Location: Login.php");
         exit();
     } else {
         echo "Error: " . $query . "<br>" . $connection->error;

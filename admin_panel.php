@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(empty($_SESSION['user_name'])) {
+  header("Location:index.php");
+  exit();
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,6 +92,12 @@ include 'header_admin.php';
     <a class="nav-link" href="admin/applications.php">
       <i class="fas fa-fw fa-address-card-o"></i>
       <span>Applications</span>
+    </a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="admin/list_category.php">
+      <i class="fas fa-fw fa-address-card-o"></i>
+      <span>Category</span>
     </a>
   </li>
  

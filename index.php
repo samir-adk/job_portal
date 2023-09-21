@@ -24,23 +24,16 @@
             <link rel="stylesheet" href="assets/css/style.css">
 
   <?php
-  session_start();
+session_start();
    include 'header.php' ;
+   
    ?>
 </head>
 <body>
 <script src="./js/custom.js"></script>
 
-   <!-- <?php
-	
-	if (isset($_SESSION['logged_user'])) {
-	    $user_name = $_SESSION['logged_user'];
-	    echo "Welcome, $user_name!";
-	} else {
-	    echo "You are not logged in.";
-	}
 
-?> -->
+
 
 <main>
 
@@ -61,7 +54,7 @@
 				<div class="row">
 					<div class="col-xl-8">
 						<!-- form -->
-						<form action="#" class="search-box">
+						<!-- <form action="#" class="search-box">
 							<div class="input-form">
 								<input type="text" placeholder="Job Tittle or keyword">
 							</div>
@@ -78,7 +71,7 @@
 							<div class="search-form">
 								<a href="#">Find job</a>
 							</div>	
-						</form>	
+						</form> -->	
 					</div>
 				</div>
 			</div>
@@ -88,23 +81,7 @@
 
 </div></div>
  
-<!-- </main><a href="job_post.php">job post</a>
-<a href="login.php">login</a>
-<a href="index.php">index</a>
 
-<a href="job_post.php">job post</a><br>
-<a href="login.php">login</a><br>
-<a href="index.php">index</a><br>
-<a href="users_post.php">user posted job</a><br>
-<a href="register_page.html">register page</a><br>
-<a href="all_posts.php">all posts</a>
-
-
-
-<div ng-app="NotificationApp" ng-controller="NotificationController" ng-init="Load()">
-<script type="text/javascript" src="notification.js"></script>
-
-</div> -->
  
 
 
@@ -298,7 +275,7 @@
 					</div>
 					<div class="process-cap">
 					   <h5>1. Search a job</h5>
-					   <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+					   <p>"Looking for your dream job? Our job seeker website's search feature makes it easy. Simply enter your desired job title, location, and hit search. Discover exciting opportunities and take the next step towards your dream career today."</p>
 					</div>
 				</div>
 			</div>
@@ -309,7 +286,7 @@
 					</div>
 					<div class="process-cap">
 					   <h5>2. Apply for job</h5>
-					   <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+					   <p>Ready to take the plunge and apply for your dream job? Our user-friendly job seeker website makes it a breeze. Just click on your desired job listing, fill out the application, and hit 'Apply.' Start your journey toward a fulfilling career with ease.</p>
 					</div>
 				</div>
 			</div>
@@ -320,7 +297,7 @@
 					</div>
 					<div class="process-cap">
 					   <h5>3. Get your job</h5>
-					   <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+					   <p>"Your dream job is just a click away! Explore exciting opportunities, discover your passion, and get ready to embark on your career journey. Search, apply, and get the job that's perfect for you with our Job Seeker website."</p>
 					</div>
 				</div>
 			</div>
@@ -343,12 +320,12 @@
 							<div class="testimonial-founder  ">
 								<div class="founder-img mb-30">
 									<img src="assets/img/testmonial/testimonial-founder.png" alt="">
-									<span>Margaret Lawson</span>
+									<span>sameer</span>
 									<p>Creative Director</p>
 								</div>
 							</div>
 							<div class="testimonial-top-cap">
-								<p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
+								<p>"As the Creative Director, I want to express my deepest gratitude to our incredibly talented team. Your passion and dedication continue to shape our creative vision, bringing it to life with every project we undertake. Together, we'll continue to push the boundaries of innovation and artistry. Let's keep inspiring the world with our imagination and creativity."</p>
 							</div>
 						</div>
 					</div>
@@ -360,32 +337,17 @@
 							<div class="testimonial-founder  ">
 								<div class="founder-img mb-30">
 									<img src="assets/img/testmonial/testimonial-founder.png" alt="">
-									<span>Margaret Lawson</span>
-									<p>Creative Director</p>
+									<span>Sujal Poudel</span>
+									<p>CEO</p>
 								</div>
 							</div>
 							<div class="testimonial-top-cap">
-								<p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
+								<p>“"Creativity knows no bounds, and at our agency, we embrace this limitless journey. We're not just crafting designs; we're weaving stories, sparking emotions, and igniting imaginations. Our mission is to captivate, innovate, and leave a lasting impact on every project. So, let's venture into the realm of endless possibilities, where every idea is a stroke of genius waiting to be unleashed."”</p>
 							</div>
 						</div>
 					</div>
 					<!-- Single Testimonial -->
-					<div class="single-testimonial text-center">
-						<!-- Testimonial Content -->
-						<div class="testimonial-caption ">
-							<!-- founder -->
-							<div class="testimonial-founder  ">
-								<div class="founder-img mb-30">
-									<img src="assets/img/testmonial/testimonial-founder.png" alt="">
-									<span>Margaret Lawson</span>
-									<p>Creative Director</p>
-								</div>
-							</div>
-							<div class="testimonial-top-cap">
-								<p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -404,8 +366,7 @@
 						<h2>24k Talented people are getting Jobs</h2>
 					</div>
 					<div class="support-caption">
-						<p class="pera-top">Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillum.</p>
-						<p>Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur signjnt occa cupidatat non inulpadeserunt mollit aboru. temnthp incididbnt ut labore mollit anim laborum suis aute.</p>
+						<p class="pera-top">"In our pursuit of creating a seamless job-seeking experience, we're dedicated to providing you with the tools and resources needed to land your dream job. From curating a diverse range of job listings to offering expert career advice, we're here to empower you on your journey to success. Explore, apply, and elevate your career with us!"</p>
 						<a href="about.html" class="btn post-btn">Post a job</a>
 					</div>
 				</div>
@@ -423,61 +384,7 @@
 	</div>
 </div>
 <!-- Support Company End-->
-<!-- Blog Area Start -->
-<div class="home-blog-area blog-h-padding">
-	<div class="container">
-		<!-- Section Tittle -->
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="section-tittle text-center">
-					<span>Our latest blog</span>
-					<h2>Our recent news</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6">
-				<div class="home-blog-single mb-30">
-					<div class="blog-img-cap">
-						<div class="blog-img">
-							<img src="assets/img/blog/home-blog1.jpg" alt="">
-							<!-- Blog date -->
-							<div class="blog-date text-center">
-								<span>24</span>
-								<p>Now</p>
-							</div>
-						</div>
-						<div class="blog-cap">
-							<p>|   Properties</p>
-							<h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
-							<a href="#" class="more-btn">Read more »</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6">
-				<div class="home-blog-single mb-30">
-					<div class="blog-img-cap">
-						<div class="blog-img">
-							<img src="assets/img/blog/home-blog2.jpg" alt="">
-							<!-- Blog date -->
-							<div class="blog-date text-center">
-								<span>24</span>
-								<p>Now</p>
-							</div>
-						</div>
-						<div class="blog-cap">
-							<p>|   Properties</p>
-							<h3><a href="single-blog.php">Footprints in Time is perfect House in Kurashiki</a></h3>
-							<a href="#" class="more-btn">Read more »</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Blog Area End -->
+
 
 </main>
 	<!-- <a href="job_post.php">job post</a>

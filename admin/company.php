@@ -81,7 +81,7 @@ if(empty($_SESSION['user_name'])) {
                   <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                   <li><a href="active-jobs.php"><i class="fa fa-briefcase"></i> Active Jobs</a></li>
                   <li class="active"><a href="applications.php"><i class="fa fa-address-card-o"></i> Candidates</a></li>
-                  <li><a href="company.php"><i class="fa fa-building"></i> Companies</a></li>
+                  <li><a href="companies.php"><i class="fa fa-building"></i> Companies</a></li>
                   <li><a href="../logout.php"><i class="fa fa-arrow-circle-o-right"></i> Logout</a></li>
                 </ul>
               </div>
@@ -104,7 +104,7 @@ if(empty($_SESSION['user_name'])) {
                     </thead>
                     <tbody>
                       <?php
-                       $sql = "SELECT * FROM users WHERE user_type='JOb seeker' ";
+                       $sql = "SELECT * FROM users WHERE user_type='JOb provider' ";
                             $result = $connection->query($sql);
 
                             if($result->num_rows > 0) {

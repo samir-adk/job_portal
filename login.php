@@ -116,37 +116,39 @@
 
 </body>
 </html>
-
-
-
-
-<?php
+<?php 
 session_start();
 include 'connection.php';
-
 if (isset($_POST['login'])) {
     $user_email = isset($_POST['user_name']) ? $_POST['user_name'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
+    
+    // Check if the user exists in the database
+    $query = "SELECT * FROM users WHERE user_name = '$user_email'";
+    $result = $connection->query($query);
+    
+    if ($result->num_rows == 1) {
+        // User found, retrieve user data
+        $user_data = $result->fetch_assoc();
+        $hash_password = $user_data['password'];
+        
+        // Verify the entered password with the hashed password
+        if (password_verify($password, $hash_password)) {
+            // Password is correct, store user's name and user_id in session variables
+            $_SESSION['user_name'] = $user_data['user_name'];
+            $_SESSION['user_id'] = $user_data['user_id'];
+           
 
-    // Check if both username and password are not empty
-    if (!empty($user_email) && !empty($password)) {
-        $check_data = "SELECT * FROM users WHERE user_email='$user_email' AND password='$password'";
-        $query = $connection->query($check_data);
 
-        if ($query->num_rows == 1) {
-            $_SESSION['logged_user'] = $user_email;
-            $fetch_user_id=$query->fetch_assoc();
-            $_SESSION['user_id']=$fetch_user_id['user_id'];
+
             header("Location: index.php");
             exit();
         } else {
-            header("Location: login.html");
-            exit();
+            echo "Login failed. Please check your credentials.";
         }
     } else {
-        echo "Please provide both username and password.";
+        echo "Login failed. Please check your credentials.";
     }
 }
+
 ?>
-
-

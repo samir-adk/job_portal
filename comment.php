@@ -1,34 +1,32 @@
 <?php
 include "connection.php";
+session_start();
 
-// Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get the raw JSON data from the request body
-    $json_data = file_get_contents("php://input");
+    if (isset($_SESSION['user_id'])) {
+        $user_id = $_SESSION['user_id'];
+        $post_id = $_POST['post_id'];
+        $comment_text = $_POST['comment'];
 
-    // Decode the JSON data
-    $data = json_decode($json_data, true);
-
-    // Check if the required fields are present in the JSON data
-    if(isset($data['user_id']) && isset($data['post_id']) && isset($data['comment'])) {
-        $user_id = $data['user_id'];
-        $post_id = $data['post_id'];
-        $comment = $data['comment'];
-        
         // Perform any necessary data validation or sanitation here
-        
-        $query = "INSERT INTO comments (comment, comment_user_id, post_id) VALUES ('$comment', '$user_id', '$post_id')";
-        
-        if ($connection->query($query) === TRUE) {
-            $response = ['status' => 'success', 'message' => 'Comment added'];
-            echo json_encode($response); // Output the JSON response
+
+        // Insert the comment into the database
+        $insert_comment_query = "INSERT INTO comments (comment_user_id, post_id, comment) VALUES ('$user_id', '$post_id', '$comment_text')";
+        if ($connection->query($insert_comment_query) === TRUE) {
+            // Comment added successfully
+            header("Location: all_posts.php"); // Redirect to the previous page after adding the comment
+            exit();
         } else {
-            $error_response = ['status' => 'error', 'message' => 'Error adding comment'];
-            echo json_encode($error_response); // Output the JSON error response
+            // Error adding the comment
+            echo "Error adding comment: " . $connection->error;
         }
     } else {
-        $error_response = ['status' => 'error', 'message' => 'Comment not received!'];
-        echo json_encode($error_response); // Output the JSON error response
+        // User is not logged in
+        header("Location: login.php"); // Redirect to the login page if the user is not logged in
+        exit();
     }
+} else {
+    // Handle cases where the request method is not POST
+    echo "Invalid request method.";
 }
 ?>

@@ -1,6 +1,4 @@
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script type="text/javascript" src="comment_controller.js"></script>
-<body ng-app="jobApp" ng-controller="jobController">
+
 <?php
 include "connection.php";
 session_start();
@@ -43,14 +41,16 @@ if (isset($_SESSION['user_id'])) {
 
             // Place the form closing tag within the loop
             echo "</form>";
+            echo "<form method='POST' action='comment.php'>";
+            echo "<input type='hidden' name='post_id' value='" . $row_data['id'] . "'>";
+            echo "<textarea name='comment' rows='3' cols='40' placeholder='Add your comment'></textarea>";
+            echo "<br>";
+            echo "<input type='submit' name='add_comment' value='Add Comment'>";
+            echo "</form>";
+
+            echo "</div>";
             ?>
-             
-              <form ng-submit="addComment(<?php echo $user_id; ?>, <?php echo $post_id; ?>)">
-            <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-            <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
-           <input type="text" ng-model="newCommentText[<?php echo $post_id; ?>]">
-          <input type="submit" name="comment" value="Add Comment">
-          </form>
+           
            <?php
             echo "</div>";
         }
